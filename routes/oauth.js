@@ -54,7 +54,6 @@ router.get('/github/callback', passport.authenticate('github', { failureRedirect
       return result;
     })
     .then((user) => {
-      console.log(user);
       const expiry = new Date(Date.now() + 1000 * 60 * 60 * 3);
       const token = jwt.sign({ userId: user[0].id }, process.env.JWT_SECRET, { expiresIn: '3h' });
 
