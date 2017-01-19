@@ -15,7 +15,7 @@ const jwt = require('jsonwebtoken');
 passport.use(new GitHubStrategy({
   clientID: process.env.GITHUB_CLIENT_ID,
   clientSecret: process.env.GITHUB_CLIENT_SECRET,
-  callbackURL: 'https://dev-c.herokuapp.com/auth/github/callback',
+  callbackURL: 'http://dev-c.herokuapp.com/auth/github/callback',
   scope: [ 'user:email' ],
 }, (accessToken, refreshToken, profile, done) => {
   return done(null, { profile, accessToken, refreshToken });
