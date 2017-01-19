@@ -39,6 +39,9 @@ export default class SignIn extends React.Component {
                   <label>Password</label>
                   <input type="password" ref="password" />
                   <div className="row center-align">
+                    <span id="greytext">Don't have an account? </span><Link to='/signup' id="signuplink">Sign Up </Link>
+                  </div>
+                  <div className="row center-align">
                     <button id="action-button" type="button" name="button" onClick={this.signIn.bind(this)}>Sign In</button>
                   </div>
                 </div>

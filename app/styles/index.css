@@ -649,6 +649,15 @@ footer p {
   text-align: center;
 }
 
+#signuplink {
+  color: #494949;
+  font-weight: bold;
+}
+
+#greytext {
+  color: grey;
+}
+
 
 @-webkit-keyframes fadeInUp {
   from {

@@ -44,8 +44,7 @@ export default class Header extends React.Component {
             {!this.props.isLoggedIn &&
               <ul id="auth-list">
                 <li className="hide-small"><Link to="/signin" style={{color: '#02b875', 'fontSize': '14px'}}>Sign in</Link></li>
-                <li className="hide-small"><Link to="/signup" style={{color: '#02b875', 'fontSize': '14px'}}>Sign up</Link></li>
-                <li className="hide-small" style={{color: '#02b875', 'fontSize': '14px'}}><a onClick={this.signIn.bind(this)}>github</a></li>
+                <li className="hide-small" style={{color: '#02b875', 'fontSize': '14px'}}><a onClick={this.signIn.bind(this)}>GitHub</a></li>
                 <li><img onClick={this.toggleMenu.bind(this)} id="menu" src="../img/menu.png" width="25px" height="25px" /></li>
               </ul>
             }
@@ -65,14 +64,11 @@ export default class Header extends React.Component {
                 <div id="overlay-content">
                   {!this.props.isLoggedIn &&
                     <div className="row">
-                      <div className="col s4">
+                      <div className="col s6">
                         <li><Link onClick={this.toggleMenu.bind(this)} to="/signin" style={{color: '#02b875', 'fontSize': '14px'}}>Sign in</Link></li>
                       </div>
-                      <div className="col s4">
-                        <li><Link onClick={this.toggleMenu.bind(this)} to="/signup" style={{color: '#02b875', 'fontSize': '14px'}}>Sign up</Link></li>
-                      </div>
-                      <div className="col s4">
-                        <li className="github-link"><a onClick={this.signIn.bind(this)} style={{color: '#02b875', 'fontSize': '14px'}}>sign in with github</a></li>
+                      <div className="col s6">
+                        <li className="github-link"><a onClick={this.signIn.bind(this)} style={{color: '#02b875', 'fontSize': '14px'}}>GitHub</a></li>
                       </div>
                     </div>
                   }
