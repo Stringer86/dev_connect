@@ -46,7 +46,6 @@ export default class CategoryLessonCard extends React.Component {
   }
 
   render() {
-    console.log(this.state.favorited);
     return (
       <div className="row">
         <div className="col s10 offset-s1 m8 offset-m2 card-border category-card">

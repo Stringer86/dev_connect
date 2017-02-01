@@ -10,7 +10,6 @@ export default class ReadLesson extends React.Component {
 
     axios.get(`/api/lessons/${id}`)
       .then((res) => {
-        console.log(res.data, 'RESPONSE');
         this.props.getLesson(res.data).bind(this);
       })
       .catch((err) => {

@@ -23,7 +23,6 @@ export default class Feed extends React.Component {
   }
 
   render() {
-    console.log("Feed!");
     if (this.props.lessons.length === 0) {
       return false;
     }

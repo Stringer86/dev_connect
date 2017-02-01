@@ -27,7 +27,6 @@ const authorize = function(req, res, next) {
 
 router.post('/api/user', ev(validations.post), (req, res, next) => {
   const { name, email, password, bio } = req.body;
-  console.log(name, " name", email, " email", password, " password", bio, " bio");
 
   knex('users')
     .select(knex.raw('1=1'))
@@ -76,7 +75,6 @@ router.get('/api/user', authorize, (req, res, next) => {
 });
 
 router.get('/api/user/:id', (req, res, next) => {
-  console.log("hello");
   const userId  = Number.parseInt(req.params.id);
 
   knex('users')
@@ -97,7 +95,6 @@ router.get('/api/user/:id', (req, res, next) => {
 
 router.get('/api/userData', authorize, (req, res, next) => {
   const { userId } = req.token;
-  console.log(userId, 'USER ID IN USER DATA');
   knex('users')
     .where('id', userId)
     .then((rows) => {

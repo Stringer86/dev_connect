@@ -13,7 +13,6 @@ export default class ReviewCard extends React.Component {
     })
     .then(res => {
       this.props.getPublished([]).bind(this);
-      console.log(this.props.publishedArticle);
       axios.get('/api/user')
         .then(res => {
           this.props.getMyLessons(res.data).bind(this);

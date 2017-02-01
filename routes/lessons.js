@@ -58,10 +58,8 @@ router.get('/api/lessons/:id', (req, res, next) => {
 });
 
 router.post('/api/lessons', authorize, ev(validations.post), (req, res, next) => {
-  console.log('I AM HERE AT THE TOP OF THE ROUTE');
   const { userId } = req.token;
   const { title, category, description, published, html, css, js, body, likes } = req.body;
-  console.log('HERRRRRRRRRRRRRRREEEEEEEEE!!!!!!!!!!!');
   const insertLesson = { userId, title, category, description, published, html, css, js, body, likes };
 
   knex('lessons')
